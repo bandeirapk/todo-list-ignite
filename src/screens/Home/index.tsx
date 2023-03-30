@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import { Header } from "../../components/Header";
+import { Task } from "../../components/Task";
 
 import { styles } from "./styles";
 
@@ -9,8 +10,8 @@ export function Home() {
       <Header />
 
       <View style={styles.tasksContainer}>
+        
         <View style={styles.info}>
-
           <View style={styles.row}>
             <Text style={styles.tasksCreated}>Criadas</Text>
             <View style={styles.counterContainer}>
@@ -24,8 +25,10 @@ export function Home() {
               <Text style={styles.counterTasks}>0</Text>
             </View>
           </View>
-
         </View>
+        <Task />
+        <Task />
+        <Task />
       </View>
     </View>
   );
