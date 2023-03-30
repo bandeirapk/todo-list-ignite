@@ -7,16 +7,16 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/mateusabelli/ignite-todo-app">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mateusabelli/ignite-todo-app">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mateusabelli/ignite-todo-app?style=social">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/bandeirapk/todo-list-ignite">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/bandeirapk/todo-list-ignite">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/bandeirapk/todo-list-ignite?style=social">
 </p>
 
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades-do-projeto">Funcionalidades</a> • 
- <a href="#-tecnologias-utilizadas">Tecnologias</a> • 
- <a href="#-instalação-e-uso">Instalação</a> 
+ <a href="https://github.com/bandeirapk/todo-list-ignite/edit/main/README.md#%EF%B8%8F-tecnologias-utilizadas">Tecnologias</a> • 
+ <a href="https://github.com/bandeirapk/todo-list-ignite/edit/main/README.md#%EF%B8%8F-instala%C3%A7%C3%A3o-e-uso">Instalação</a>
 </p>
 
 <h4 align="center"> 
