@@ -13,7 +13,7 @@ export function Task() {
       </TouchableOpacity>
 
       <View style={styles.textContainer}>
-        <Text style={styles.textDone}>Integer </Text>
+        <Text style={styles.textDone}>Estudar Javascript </Text>
       </View>
 
       <TouchableOpacity>
