@@ -9,9 +9,10 @@ export type TaskProps = {
   id?: string;
   title: string;
   isCompleted: boolean;
+  onRemove?: (id: string) => void;
 }
 
-export function Task({ title, isCompleted }: TaskProps) {
+export function Task({ id, title, isCompleted, onRemove }: TaskProps) {
   return (
     <View style={styles.container}>
       <TouchableOpacity 
@@ -28,7 +29,9 @@ export function Task({ title, isCompleted }: TaskProps) {
         </Text>
       </View>
 
-      <TouchableOpacity>
+      <TouchableOpacity 
+        onPress={ () => onRemove(id) }
+      >
         <TrashIcon  />
       </TouchableOpacity>
     </View>

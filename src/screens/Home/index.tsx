@@ -14,12 +14,25 @@ export function Home() {
 
   function handleTaskAdd() {
     if (newTask !== '' && newTask.length >= 5 ) {
-      setTasks(task => [...task, {id: uuidv4(), title: newTask, isCompleted: false}]);
+      setTasks(task => [{id: uuidv4(), title: newTask, isCompleted: false}, ...task]);
     } else {
-      Alert.alert('Ops!', 'A tarefa deve ter pelo menos 5 caracteres.');
+      Alert.alert("Ops!", "A tarefa deve ter pelo menos 5 caracteres.");
     }
 
     setNewTask('');
+  }
+
+  function handleRemoveTask(id: string) {
+    Alert.alert("Remover Tarefa", "Tem certeza que você deseja remover essa tarefa?", [
+      {
+        text: 'Sim',
+        onPress: () => setTasks(prevState => (prevState.filter(task => task.id !== id)))
+      },
+      {
+        text: 'Não',
+        style: 'cancel'
+      }
+    ])
   }
 
   function handleBlurWithKeyboard() {
@@ -37,7 +50,7 @@ export function Home() {
   return (
     <TouchableWithoutFeedback onPress={handleBlurWithKeyboard}>
       <View style={styles.container} >
-        <Header task={newTask} onChangeText={setNewTask} onPress={handleTaskAdd}/>
+        <Header task={newTask} onChangeText={setNewTask} onPress={handleTaskAdd} />
 
         <View style={styles.tasksContainer}>
           
@@ -60,7 +73,12 @@ export function Home() {
           <FlatList 
             data={tasks}
             keyExtractor={tasks => tasks.id!}
-            renderItem={({item}) => (<Task key={item.id} isCompleted={item.isCompleted} title={item.title} />)}
+            renderItem={({item}) => (
+              <Task key={item.id} 
+              isCompleted={item.isCompleted} 
+              title={item.title} 
+              onRemove={() => handleRemoveTask(item.id)} />
+            )}
             ListEmptyComponent={<Empty />}
           />
         </View>
