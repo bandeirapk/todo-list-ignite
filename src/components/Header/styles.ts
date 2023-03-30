@@ -39,6 +39,8 @@ export const styles = StyleSheet.create({
 
     fontSize: THEMES.md,
 
+    color: THEMES.gray100,
+
     backgroundColor: THEMES.gray500,
   },
   buttonInput: {
