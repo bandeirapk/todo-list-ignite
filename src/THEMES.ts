@@ -13,4 +13,11 @@ export const THEMES = {
   purpleDark: '#5E60CE',
   blue: '#4EA8DE',
   blueDark: '#1E6F9F',
-}
+
+  regular: 'Inter_400Regular',
+  bold: 'Inter_700Bold',
+
+  sm: 12,
+  md: 14,
+  lg: 16,
+};
