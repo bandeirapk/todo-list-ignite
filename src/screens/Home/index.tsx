@@ -26,7 +26,8 @@ export function Home() {
     Alert.alert("Remover Tarefa", "Tem certeza que você deseja remover essa tarefa?", [
       {
         text: 'Sim',
-        onPress: () => setTasks(prevState => (prevState.filter(task => task.id !== id)))
+        onPress: () => setTasks(prevState => (prevState.filter(task => task.id !== id))),
+        style: 'destructive'
       },
       {
         text: 'Não',
@@ -53,6 +54,8 @@ export function Home() {
     });
   }
   
+  const tasksCreated = tasks.length;
+  const tasksDone = tasks.filter(task => task.isCompleted).length;
 
   return (
     <TouchableWithoutFeedback onPress={handleBlurWithKeyboard}>
@@ -65,14 +68,14 @@ export function Home() {
             <View style={styles.row}>
               <Text style={styles.tasksCreated}>Criadas</Text>
               <View style={styles.counterContainer}>
-                <Text style={styles.counterTasks}>0</Text>
+                <Text style={styles.counterTasks}>{tasksCreated}</Text>
               </View>
             </View>
 
             <View style={styles.row}>
               <Text style={styles.tasksDone}>Concluídas</Text>
               <View style={styles.counterContainer}>
-                <Text style={styles.counterTasks}>0</Text>
+                <Text style={styles.counterTasks}>{tasksDone}</Text>
               </View>
             </View>
           </View>
