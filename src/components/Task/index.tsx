@@ -10,13 +10,15 @@ export type TaskProps = {
   title: string;
   isCompleted: boolean;
   onRemove?: (id: string) => void;
+  onTaskCheck?: () => void;
 }
 
-export function Task({ id, title, isCompleted, onRemove }: TaskProps) {
+export function Task({ id, title, isCompleted, onRemove, onTaskCheck }: TaskProps) {
   return (
     <View style={styles.container}>
       <TouchableOpacity 
         style={{...isCompleted ? styles.circleCheck : styles.circleEmpty}}
+        onPress={onTaskCheck}
       >
         {isCompleted && <Check />}
       </TouchableOpacity>

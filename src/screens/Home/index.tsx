@@ -35,6 +35,13 @@ export function Home() {
     ])
   }
 
+  function handleTaskDone(id: string) {
+    setTasks(prevState => (prevState.map(task => task.id === id ? {
+      ...task,
+      isCompleted: !task.isCompleted
+    } : task)))
+  }
+
   function handleBlurWithKeyboard() {
     Keyboard.dismiss();
   }
@@ -77,7 +84,8 @@ export function Home() {
               <Task key={item.id} 
               isCompleted={item.isCompleted} 
               title={item.title} 
-              onRemove={() => handleRemoveTask(item.id)} />
+              onRemove={() => handleRemoveTask(item.id)} 
+              onTaskCheck={() => handleTaskDone(item.id)}/>
             )}
             ListEmptyComponent={<Empty />}
           />
