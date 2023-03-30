@@ -5,15 +5,27 @@ import { styles } from './styles';
 import Check from '../../assets/check.svg'
 import TrashIcon from '../../assets/trash.svg'
 
-export function Task() {
+export type TaskProps = {
+  id?: string;
+  title: string;
+  isCompleted: boolean;
+}
+
+export function Task({ title, isCompleted }: TaskProps) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.circleCheck}>
-        <Check  />
+      <TouchableOpacity 
+        style={{...isCompleted ? styles.circleCheck : styles.circleEmpty}}
+      >
+        {isCompleted && <Check />}
       </TouchableOpacity>
 
       <View style={styles.textContainer}>
-        <Text style={styles.textDone}>Estudar Javascript </Text>
+        <Text style={{
+          ...isCompleted ? styles.textDone : styles.textCreated,
+        }}> 
+          {title} 
+        </Text>
       </View>
 
       <TouchableOpacity>

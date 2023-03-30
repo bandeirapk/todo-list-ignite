@@ -34,7 +34,6 @@ export const styles = StyleSheet.create({
     padding: 16,
 
     borderRadius: 5,
-    borderColor: THEMES.gray700,
     borderWidth: 1,
 
     fontSize: THEMES.md,

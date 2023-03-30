@@ -49,9 +49,17 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
 
     borderRadius: 12,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: THEMES.purple,
 
     backgroundColor: THEMES.purple,
+  },
+  circleEmpty: {
+    width: 20,
+    height: 20,
+
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: THEMES.blue,
   },
 });
