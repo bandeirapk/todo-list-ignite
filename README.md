@@ -12,13 +12,6 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/bandeirapk/todo-list-ignite?style=social">
 </p>
 
-<p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades-do-projeto">Funcionalidades</a> • 
- <a href="https://github.com/bandeirapk/todo-list-ignite/edit/main/README.md#%EF%B8%8F-tecnologias-utilizadas">Tecnologias</a> • 
- <a href="https://github.com/bandeirapk/todo-list-ignite/edit/main/README.md#%EF%B8%8F-instala%C3%A7%C3%A3o-e-uso">Instalação</a>
-</p>
-
 <h4 align="center"> 
 	🚧  Projeto concluído 🚀 🚧
 </h4>
